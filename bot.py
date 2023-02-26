@@ -44,7 +44,6 @@ for i in range(0, SIZE[1]):
         best_L = 765
         for key in colors_rgbs:
             L = abs(colors_rgbs[key][0] - px[j, i][0]) + abs(colors_rgbs[key][1] - px[j, i][1]) + abs(colors_rgbs[key][2] - px[j, i][2])
-            # L = (colors_rgbs[key][0] - px[j, i][0]) ** 2 + (colors_rgbs[key][1] - px[j, i][1])**2 + (colors_rgbs[key][2] - px[j, i][2])**2
             if L < best_L:
                 best_L = L
                 best_color = key
