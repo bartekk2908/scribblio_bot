@@ -3,6 +3,7 @@ from PIL import Image
 import pynput
 import time
 
+
 colors_rgbs = {"white": (255, 255, 255),       "black": (0, 0, 0),    "grey_l": (193, 193, 193),   "grey_d": (76, 76, 76),
                "red_l": (239, 19, 11),       "red_d": (116, 11, 7),    "orange_l": (255, 113, 0), "orange_d": (194, 56, 0),
                "yellow_l": (255, 228, 0),    "yellow_d": (232, 162, 0), "green_l": (0, 204, 0),  "green_d": (0, 85, 16),
@@ -73,3 +74,8 @@ for key in colors_coords:
                 mouse.position = (up_left_cor[0] + abs((down_right_cor[0] - up_left_cor[0]) / SIZE[0] * j), up_left_cor[1] + abs((down_right_cor[1] - up_left_cor[1]) / SIZE[1] * i))
                 time.sleep(time_s)
                 mouse.click(pynput.mouse.Button.left, 1)
+
+# TODO:
+# - znalezienie odpowiednich wartości rozmiaru obrazu
+# - optymalizacja poprzez rysowanie linii
+# - automatyczne wyszukiwanie pozycji narzędzi (?)
